@@ -10,6 +10,10 @@ Automatically skips Netflix intros, recaps, and credits.
 - Enable/disable all features with a master toggle
 - Individually toggle features
 
+## Stats
+
+<iframe src="https://chrome-stats.com/embed/netflix-auto-skipper/trends?theme=dark" width="400" height="400" frameborder="0"></iframe>
+
 ## Installation (Firefox)
 You can install the extension [here](https://addons.mozilla.org/en-US/firefox/addon/netflix-auto-skipper/)
 
