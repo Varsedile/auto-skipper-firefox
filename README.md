@@ -1,5 +1,5 @@
 # Auto Skipper
-
+![alt text](src/icons/icon.png)
 Auto Skipper for Netflix and Hotstar
 
 ## Features
