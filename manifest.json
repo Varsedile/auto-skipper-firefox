@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Netflix Auto Skipper",
+  "name": "Auto Skipper for Firefox",
   "version": "1.0.1",
   "description": "Automatically skips Netflix intros, recaps, and credits.",
   "permissions": [
@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.netflix.com/*"
+        "*://*.netflix.com/*",
+        "*://*.hotstar.com/*"
       ],
       "js": [
         "src/content.js"
@@ -19,18 +20,17 @@
   ],
   "browser_action": {
     "default_icon": {
-      "48": "src/icons/icon-48.png"
+      "48": "src/icons/icon.png"
     },
     "default_title": "Netflix Auto Skipper",
     "default_popup": "src/popup/popup.html"
   },
   "icons": {
-    "48": "src/icons/icon-48.png",
-    "96": "src/icons/icon-96.png"
+    "48": "src/icons/icon.png"
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "{44507362-f5b3-444d-a8fd-a87bd0e67c0c}",
+      "id": "test@test.com",
       "strict_min_version": "142.0",
       "data_collection_permissions": {
         "required": ["none"]
