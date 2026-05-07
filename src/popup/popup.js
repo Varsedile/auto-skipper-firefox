@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('github-link').addEventListener('click', (e) => {
     e.preventDefault();
-    browser.tabs.create({ url: 'https://github.com/jask04/netflix-auto-skipper' });
+    browser.tabs.create({ url: 'https://github.com/Varsedile/auto-skipper-firefox' });
   });
 });

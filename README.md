@@ -1,21 +1,16 @@
 # Netflix Auto Skipper
-![alt text](src/icons/icon-96.png)
+![alt text](src/icons/icon.png)
 Automatically skips Netflix intros, recaps, and credits.
 
 ## Features
 
 - Skips intros
 - Skips recaps
-- Skips credits (next episode)
-- Enable/disable all features with a master toggle
+- Skips credits (not available for Hotstar but they do have their own auto skip to next episode)
+- Enable/disable all features with one switch
 - Individually toggle features
 
-## Stats
 
-[![Chrome Stats](https://img.shields.io/badge/User%20Stats-chrome--stats.com-blue?style=for-the-badge)](https://chrome-stats.com/d/netflix-auto-skipper)
-
-## Installation (Firefox)
-You can install the extension [here](https://addons.mozilla.org/en-US/firefox/addon/netflix-auto-skipper/)
 
 ## Installation (Testing)
 
@@ -28,6 +23,6 @@ You can install the extension [here](https://addons.mozilla.org/en-US/firefox/ad
 
 Any contributions are welcome. Please feel free to submit a pull request.
 
-## License
+## Original Creator for just the Netflix version
 
-This project is licensed under the MIT License.
+[Forked From](https://github.com/jask04/netflix-auto-skipper)

@@ -25,7 +25,6 @@ body {
 }
 
 .section {
-  background-color: #222222;
   border-radius: 10px;
   padding: 14px 16px;
   display: flex;
@@ -75,7 +74,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #e50914;
+  background-color: #0780f1;
 }
 
 input:checked + .slider:before {
@@ -106,6 +105,7 @@ input:checked + .slider:before {
   cursor: pointer;
   font-size: 14px;
   user-select: none;
+  padding-bottom: 5px;
 }
 
 .checkbox-container input {
@@ -131,7 +131,7 @@ input:checked + .slider:before {
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #e50914;
+  background-color: #0780f1;
 }
 
 .checkmark:after {
@@ -167,7 +167,7 @@ input:checked + .slider:before {
   gap: 8px;
   padding: 8px 16px;
   background-color: #222222;
-  color: rgb(100, 149, 237);
+  color: white;
   border: none;
   border-radius: 8px;
   font-size: 13px;
@@ -179,7 +179,6 @@ input:checked + .slider:before {
 
 .github-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
 }
 
 .github-logo {
