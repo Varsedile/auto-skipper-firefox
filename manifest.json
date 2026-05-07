@@ -20,13 +20,13 @@
   ],
   "browser_action": {
     "default_icon": {
-      "48": "src/icons/icon.png"
+      "96": "src/icons/icon.png"
     },
     "default_title": "Netflix Auto Skipper",
     "default_popup": "src/popup/popup.html"
   },
   "icons": {
-    "48": "src/icons/icon.png"
+    "96": "src/icons/icon.png"
   },
   "browser_specific_settings": {
     "gecko": {
