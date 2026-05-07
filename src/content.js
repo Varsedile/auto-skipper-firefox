@@ -7,30 +7,15 @@ let settings = {
 
 let selector = '';
 
+function findUsingXpath(xpath) {
+  return document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+
 function buildSelector() {
   const parts = [];
-
   if (window.location.href.includes("netflix.com")) {
     if (settings.skipIntro) {
       parts.push('[data-uia="player-skip-intro"]');
-    }
-    if (settings.skipRecap) {
-      parts.push('[data-uia="player-skip-recap"]');
-    }
-    if (settings.skipCredits) {
-      parts.push('.skip-credits a', '.watch-video--skip-content-button');
-    }
-  }
-  if (window.location.href.includes("hotstar.com")) {
-    if (settings.skipIntro) {
-      var allButtons = document.getElementsByTagName(button);
-      for(var i=0;i<mySpans.length;i++){
-      if(mySpans[i].innerHTML == 'Skip Intro'){
-      var parent = mySpans[i].parentNode;
-      break;
-      }}
-      console.log(parent)
-      parts.push('[class="_1CSTLo7uotP5mTlp3jKun7 relative overflow-hidden flex flex-row justify-center items-center RADIUS_03 py-SPACE_04 px-SPACE_05 px-SPACE_08 py-SPACE_04 rounded RADIUS_03 _1hvr__NMJbQHNb3s6iYa1w BODY2_MEDIUM TEXT_COLOR_L0"]');
     }
     if (settings.skipRecap) {
       parts.push('[data-uia="player-skip-recap"]');
@@ -55,16 +40,28 @@ browser.storage.onChanged.addListener(() => {
 });
 
 const observer = new MutationObserver((mutations) => {
-  if (!settings.enabled || !selector) {
+  if (!settings.enabled || (!selector && !window.location.href.includes("hotstar.com"))) {
     return;
   }
-
   for (const mutation of mutations) {
     if (mutation.addedNodes.length) {
-      const skipButton = document.querySelector(selector);
-      if (skipButton) {
-        skipButton.click();
-        return;
+      if (selector) {
+        const skipButton = document.querySelector(selector);
+        if (skipButton) {
+          skipButton.click();
+          return;
+        }}
+      if (window.location.href.includes("hotstar.com")) {
+        if (settings.skipIntro) {
+          var findButton = findUsingXpath("//text()[contains(.,'Skip Intro')]/ancestor::*[self::button][1]")
+          if (findButton) {
+            findButton.click()
+        }}
+        if (settings.skipRecap) {
+          var findButton = findUsingXpath("//text()[contains(.,'Skip Recap')]/ancestor::*[self::button][1]")
+          if (findButton) {
+            findButton.click()
+        }}
       }
     }
   }
