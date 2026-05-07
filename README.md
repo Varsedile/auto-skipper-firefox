@@ -1,6 +1,6 @@
-# Netflix Auto Skipper
+# Auto Skipper
 ![alt text](src/icons/icon.png)
-Automatically skips Netflix intros, recaps, and credits.
+Auto Skipper for Netflix and Hotstar
 
 ## Features
 
@@ -9,8 +9,6 @@ Automatically skips Netflix intros, recaps, and credits.
 - Skips credits (not available for Hotstar but they do have their own auto skip to next episode)
 - Enable/disable all features with one switch
 - Individually toggle features
-
-
 
 ## Installation (Testing)
 
