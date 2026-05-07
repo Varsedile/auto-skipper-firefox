@@ -1,5 +1,5 @@
 # Auto Skipper
-![alt text](src/icons/icon.png)
+
 Auto Skipper for Netflix and Hotstar
 
 ## Features
@@ -23,4 +23,4 @@ Any contributions are welcome. Please feel free to submit a pull request.
 
 ## Original Creator for just the Netflix version
 
-[Forked From](https://github.com/jask04/netflix-auto-skipper)
+[Forked From jask04](https://github.com/jask04/netflix-auto-skipper)
